@@ -1,6 +1,6 @@
 # Boxes #
 
-*Box* son paquetes utilizados por Vagrant para generar máquinas virtuales basandos en plantillas. Vagrant proporciona utilerias para descargar y administrar las plantillas disponibles en Internet.
+*Box* son paquetes utilizados por Vagrant para generar máquinas virtuales basados en plantillas. Vagrant proporciona utilerías para descargar y administrar las plantillas disponibles en Internet.
 
 
 
@@ -27,7 +27,7 @@ Ejemplo de salida:
 
 ### 3. Eliminar Box
 
-Las plantillas descargas tienen la función de generar diferentes máquinas virtuales de manera rapida sin la necesidad del uso de Internet. En ocasiones ya no es necesario mantener la imágen o box para eliminar la platilla se puede utilizar el siguiente comando:
+Las plantillas descargas tienen la función de generar diferentes máquinas virtuales de mana necesidad del uso de Internet. En ocasiones ya no es necesario mantener la imagen o box para eliminar la platilla se puede utilizar el siguiente comando:
 
 ```bash
 vagrant box remove <box name>

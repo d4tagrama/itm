@@ -5,7 +5,7 @@
 
 Es posible realizar la publicación de los servicios utilizando la *IP* del *host*. Para realizar la publicación es necesario configurar un *forward* del puerto deseado del *host* a la máquina virtual.
 
-Esto se pueda realizar agregando la siguietne línea al apartado de configuración de la máquina virtual:
+Esto se pueda realizar agregando la siguiente línea al apartado de configuración de la máquina virtual:
 
 ```bash
 config.vm.network "forwarded_port", guest: <guest_port>, host: <host_port>
@@ -25,7 +25,7 @@ En caso la PC donde se está ejecutando VirtualBox tiene asignada la dirección 
 
 Vagrant permite compartir nuestro ambiente vía Internet permitiendo publicar nuestro trabajo de manera fácil.  Para ralizar lo anterior es necesario utilizar el *plugin share* de Vagrant. El *plugin* de Vagrant utiliza la herramienta **ngrok** la cual tiene que estar previamente instalada. **Ngrok** es una herramienta utilizada por los desarrolladores web para compartir y publicar sus APIs de manera temporal para su evaluación. 
 
-Posterior a la instalación de ngrok[^1] es posible instalar el *plugin* **vagrant-share** el cual conectara los puertos declarados en el Vagrantfile con *ngrok*.
+Posterior a la instalación de ngrok es posible instalar el *plugin* **vagrant-share** el cual conectara los puertos declarados en el Vagrantfile con *ngrok*.
 
 La instalación del plugin se realizar con el siguiente comando:
 
@@ -33,7 +33,7 @@ La instalación del plugin se realizar con el siguiente comando:
 $ vagrant plugin install vagrant-share
 ```
 
-Posterior a la instalación del plugin utilizamos el comando `vagrant share` para publicar nuestra aplicación. Almomento de ejecutar el comando `vagrant share` Vangrant analizará el archivo `Vagrantfile` indentificando en que puerto se mapeo la aplicación y finalmente proporcionará una liga la cual puede ser utilizada desde cualquier navegador para acceder al servicio publicado:
+Posterior a la instalación del plugin utilizamos el comando `vagrant share` para publicar nuestra aplicación. Al momento de ejecutar el comando `vagrant share` Vangrant analizará el archivo `Vagrantfile` identificando en que puerto se mapeo la aplicación y finalmente proporcionará una liga la cual puede ser utilizada desde cualquier navegador para acceder al servicio publicado:
 
 ![vagrant_share.png](miscellaneous/vagrant_share.png)
 

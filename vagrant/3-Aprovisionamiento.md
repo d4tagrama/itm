@@ -1,10 +1,10 @@
 # Aprovisionamiento
 
-Las máquinas virtuales (Box) es una plantilla de un sistema operativo en blanco es decir no ospeda ningun servicio o aplicación en la máquina virtual.
+Las máquinas virtuales (Box) es una plantilla de un sistema operativo en blanco es decir no hospeda ningún servicio o aplicación en la máquina virtual.
 
 ### 1. Instalación de paquetes
 
-Una manera de instalar paquetes en la máquina virtual es accediendo vía el comando `vagrant ssh ` y posteriormente ejecutar los comandos para instalar los paquetes disponibles en en el sistema operativo. 
+Una manera de instalar paquetes en la máquina virtual es accediendo vía el comando `vagrant ssh ` y posteriormente ejecutar los comandos para instalar los paquetes disponibles en el sistema operativo. 
 
 Ejemplo:
 

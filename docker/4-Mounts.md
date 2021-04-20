@@ -1,11 +1,11 @@
 # Uso de *bind mounts*
 
-Docker permite que los direcotrios y archivos en el *host* sea accesible dentro el contenedor. Los archivos o directorios hacen referencia a la ruta absoluta en el *host*. 
+Docker permite que los directorios y archivos en el *host* sea accesible dentro el contenedor. Los archivos o directorios hacen referencia a la ruta absoluta en el *host*. 
 
 
 ### 1. Utilizando *bind mount*
 
-Al momento de ejecutar un contenedor es posible espesificar que directorios del *host* estará disponible en el contenedor agregando el parametro `--mount`. 
+Al momento de ejecutar un contenedor es posible especificar que directorios del *host* estará disponible en el contenedor agregando el parámetro `--mount`. 
 
 	--mount type=bind,source=<host_path>,target=<container_destination_path>
 
@@ -26,9 +26,9 @@ docker run -d \
 ```
 **Nota:** El parámetro `--name` permite establecer el nombre del contenedor.
 
-### 2. Trabajando con volumenes
+### 2. Trabajando con volúmenes
 
-Los volumenes un el mecanismo preferido para almacenar información de manera persistente en los contenedores de Docker. Bind depende de la estrucutra de directorios para trabajar, los volumenes son completamente manejado por Docker.
+Los volúmenes es el mecanismo preferido para almacenar información de manera persistente en los contenedores de Docker. Bind depende de la estrucutra de directorios para trabajar, los volumenes son completamente manejado por Docker.
 
 Existen multiples comandos para administrar los volumenes en Docker, a continuación se muestran los más comunes:
 
@@ -39,6 +39,15 @@ Existen multiples comandos para administrar los volumenes en Docker, a continuac
 
 ### 3. Asignando un volumen al contenedor
 
-Existe multples 
+Para asignar un volumen se realiza con el comando mount sin el parámetro *type*, Ejemplo:
 
-![docker_build.png](miscellaneous/docker_build.png)
+```
+docker run -d \
+  --name devtest \
+  --mount source=myvol2,target=/app \
+  nginx:latest
+```
+
+Ver detalle del volumen:
+
+![docker_build.png](miscellaneous/docker_inspect_vol.png)
