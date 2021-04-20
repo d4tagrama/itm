@@ -1,14 +1,11 @@
-# Tabla de contenido
-
-
 <!-- md-toc-begin -->
-# Table of Content
-* [Vagrant](#git-markdown-toc)
+# Tabla de contenido
+* [Vagrant](#mark-vagrant)
   * [Introducción](vagrant/1-Introduccion.md)
-  * [Contenedores](vagrant/2-Compartiendo_archivos.md)
-  * [Personalizando Imagen](vagrant/3-Aprovisionamiento.md)
-  * [Mounts](vagrant/4-Publicando_servicios.md)
-* [Docker](#git-markdown-toc)
+  * [Manipulando Box](vagrant/2-Trabajando_box.md)
+  * [Aporvisionamiento](vagrant/3-Aprovisionamiento.md)
+  * [Publicando Servisios](vagrant/4-Publicando_servicios.md)
+* [Docker](#mark-docker)
   * [Introducción](docker/1-Introduccion.md)
   * [Contenedores](docker/2-Contenedores.md)
   * [Personalizando Imagen](docker/3-Creando_imagen.md)
