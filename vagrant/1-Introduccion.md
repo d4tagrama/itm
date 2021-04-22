@@ -20,7 +20,7 @@ Aun cuando es posible generar el `Vagrantfile` de manera manual con cualquier ed
 vagrant init ubuntu/bionic64
 ```
 
-Posterior de ejecutar el comando anterior podemos utilizar el comando `ls` para listar los archivos en el directorio actual donde se debe visualizar un nuevo archivo con el nombre de  *Vagrantfile*.
+Podemos utilizar el comando `ls` en la consola para listar los archivos en el directorio actual donde se debe visualizar un nuevo archivo con el nombre de  *Vagrantfile*.
 
 ### 3. Iniciando la máquina virtual
 Vagrant permite poner en diferentes estados la máquina virtual  como: **halt**, **up**, **suspended**, entre otros. Para inicializar la máquina virtual es necesario ejecutar el siguiente comando:
@@ -28,12 +28,12 @@ Vagrant permite poner en diferentes estados la máquina virtual  como: **halt**,
 ```bash
 vagrant up
 ```
-El comando anterior genera de manera automática una máquina virtual dependiendo el *provider* seleccionado en nuetro caso es *VirtualBox*.
+El comando anterior genera de manera automática una máquina virtual dependiendo el *provider* seleccionado, en nuetro caso es *VirtualBox*.
 
 **Nota:** Se puede seleccionar el proveedor a utilizar utilizando el comando `$ vagrant up --provider=<provider>`
 ### 4. Accediendo a la máquina virtual
 
-Vagrant al instanciar  el *box* mapea puertos definidos a la instancia o máquina virtual. Vagrant genera una llave publica la cual permitirá acceder vía `ssh` a la máquina virtual sin la necesidad de contraseña.
+Vagrant al instanciar  el *box* mapea puertos definidos a la instancia o máquina virtual. Demanera automática se genera una llave publica la cual permitirá acceder vía `ssh` a la máquina virtual sin la necesidad de ingresar usuario y contraseña.
 
 
 Para acceder a la máquina virtual ejecutamos el siguiente comando:

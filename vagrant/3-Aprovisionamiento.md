@@ -82,3 +82,45 @@ Salida del comando:
 
 Como se puede observar regresa el contenido HTML de la página de bienvenida de apache.
 
+### 3. Aprovisonando con *scripts*
+
+Para automatiza el aprovisionamiento es posible utilizar *scripts* el cual permita instalar, configurar o cualquier acción requerida para aprovisionar nuestra aplicación:
+
+#### 3.1 Generando *script*
+
+Con nuestro editor de texto favorito creamos un archivo con el nombre de *bootstrap.sh* en el cual agregarmos la siguiente líneas:
+
+
+```
+apt-get update
+apt-get install -y apache2
+if ! [ -L /var/www ]; then
+  rm -rf /var/www
+  ln -fs /vagrant /var/www
+fi
+```
+**Nota:** El archivo *bootstrap.sh* se debe encontrar en el mismo nivel que nuestro *Vagrantfile*.
+
+### 3.2 Modificando *Vagrantfile*
+
+En el archivo *Vagrantfile* en la sección de configuración agregamos la siguiente línea:
+
+	config.vm.provision :shell, path: "bootstrap.sh"
+
+La líena anterior indica que se ejectura un *script* en la consola de la máquina virtual.
+
+
+### 3.3 Iniciando nuestro *Box*
+
+Para aprovisonar la máquina virtual de manera automática es posible realizarlos ejecutando con el comando `vagrant up` su es la primera vez que se generá lamáquina virtual.
+
+En dado caso la máquina virtual ya este en ejecución o sea una máquina virutal ya existente es posible forzar el aprovisionamiento utilizando el comando:
+
+`vagrant reload --provision`
+
+Ejemplo de salida del comando reload:
+
+![box_provisioner](miscellaneous/vagrant_provisioner.png)
+
+
+**Nota:** Cada vez que se modifique el archivo *bootstrap.sh* es necesario ejecutar el comando anterior.

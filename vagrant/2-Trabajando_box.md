@@ -1,21 +1,24 @@
 # Boxes #
 
-*Box* son paquetes utilizados por Vagrant para generar máquinas virtuales basados en plantillas. Vagrant proporciona utilerías para descargar y administrar las plantillas disponibles en Internet.
+*Box* son paquetes utilizados por Vagrant para generar máquinas virtuales basados en plantillas. Vagrant proporciona las utilerías necesarias para descargar y administrar las plantillas(Box) disponibles en los repositorios ubicados en Internet.
 
 
 
 ### 1. Descargando *box*
 
-El catalogo cuenta con la mayoría de los sistemas operativos base y aplicaciones como LAMP stacks, Ruby, Python, entre otros. La descarga de las plantillas del repositorio público se realiza mendiante el comando:
+*Vagrant* cuenta con un catálogo en internet con la mayoría de los sistemas operativos base y aplicaciones como: LAMP stacks, Ruby, Python, entre otros. Para descargar una plantilla o *Box* del repositorio público Vagrant proporciona el comando:
+
 ```bash
 vagrant box add USER/BOX
 ```
+
 
 Para descargar el *box* referente a Ubuntu bionic ejecutamos el comando:
 
 ```bash
 vagrant box add ubuntu/bionic64
 ```
+Es posible consultar la lista de *Box* Disponible en el [sitio](https://app.vagrantup.com/boxes/search) de Vagrant Cloud.
 
 ### 2. Visualizando plantillas (Box)
 

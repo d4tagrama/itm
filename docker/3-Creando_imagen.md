@@ -27,51 +27,52 @@ Descripción de parametros:
 
 ### 2. Creando imagen
 
-Para generar la nueva imagen Docker proporciona el comando `build` para generar una nueva imagen basada de otra y personalizar la nueva imagen con el Dockerfile indicado.
+Para generar una nueva imagen Docker proporciona el comando `build` este comando permite generar una nueva imagen basada de otra y personalizar la nueva imagen utilizando el Dockerfile desado.
+
+Ejemplo de sintaxis del comando `docker build`:
 
 ```
 docker build -t <repositorio>/<nombre_contenedor>:<tag> <ubicación del Dockerfile>
 ```
 
-Para crear la nueva es necesario realizar los siguientes pasos:
+Para crear una nueva es necesario realizar los siguientes pasos:
 
 1. Ubicarnos en el directorio *dockerfile*.
-2. Dentro este directorio ejecutar el siguiente comando `docker build -t roid/itm:v2 .`
+2. Dentro este directorio ejecutar el siguiente comando `docker build -t roid/itm:v2 .` Es importante mencionar que se desea generar una imagen para el repositorio *roid* con nombre *itm* y etiqueta *v2*.
 
-Ejemplo de salida:
+	Ejemplo de salida:
 
-![docker_build.png](miscellaneous/docker_build.png)
+	![docker_build.png](miscellaneous/docker_build.png)
 
 
 Para verificar la creación de la nueva imagen utilizamos el comando `docker images` para visualizar las imágenes disponibles de manera local.
 
 ![docker_images_build.png](miscellaneous/docker_images_build.png)
 
+**Nota:** Para este ejemplo es importante ubicarnos en el directorio [Dockerfile](dockerfile/Dockerfile) el cual contiene una aplicación de *Node*.
+
 
 ### 3. Ejecutando contenedor
 
 La ejecución de un contenedor se puede realizar de dos maneras la primera permite ejecutar el contenedor de manera interactiva es decir visualizar el *standard output* del contendor en pantalla. La segunda opción es ejecutar el contenedor en modo no atendido un *background*.
 
-1. Modo interactivo.
+#### 3.1 Modo interactivo.
 
-	Para ejecutar un contenedor Docker cuenta con el `run` para poner en marcha el contenedor. Para ejecutar un contenedor basado de la imagen generada con anterioridad ejecutamos el siguiente comando:
-    
-    ```
-	docker run -it roid/itm:v2
-    ```
-    
-    Ejemplo de salida:
+Para ejecutar un contenedor Docker cuenta con el `run` para poner en marcha el contenedor. Para ejecutar un contenedor basado de la imagen generada con anterioridad ejecutamos el siguiente comando:
 
-    ![docker_run_it.png](miscellaneous/docker_run_it.png)
+		docker run -it roid/itm:v2
 
-2. Modo no atendido	
+Ejemplo de comando:
 
-	Para la ejecución en modo *background* utilizaremos el comando `run`, pero con la diferencia de en lugar de proporcionar los parámentros `-it` proporcionaremos el parámetro `-d`.
+![docker_run_it.png](miscellaneous/docker_run_it.png)
 
-    ```
+
+#### 3.2 Modo no atendido
+
+Para la ejecución en modo *background* utilizaremos el comando `run`, pero con la diferencia de en lugar de proporcionar los parámentros `-it` proporcionaremos el parámetro `-d`.
+
 	docker run -d roid/itm:v2
-    ```
-    
+
 **Nota:** Para verificar si el contenedor se esta ejecutando en *background* ejecutamos el comando `docker ps`
     
 ### 4. Verificando aplicación web

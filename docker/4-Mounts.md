@@ -1,6 +1,6 @@
 # Uso de *bind mounts*
 
-Docker permite que los directorios y archivos en el *host* sea accesible dentro el contenedor. Los archivos o directorios hacen referencia a la ruta absoluta en el *host*. 
+Docker permite que los directorios y archivos en el *host* sea accesible dentro el contenedor. Los archivos o directorios deben ser referenciados de manera absoluta en el *host* para que se puedan montar de manera correcta en el contenedor. 
 
 
 ### 1. Utilizando *bind mount*
@@ -28,14 +28,14 @@ docker run -d \
 
 ### 2. Trabajando con volúmenes
 
-Los volúmenes es el mecanismo preferido para almacenar información de manera persistente en los contenedores de Docker. Bind depende de la estrucutra de directorios para trabajar, los volumenes son completamente manejado por Docker.
+Los volúmenes es el mecanismo preferido para almacenar información de manera persistente en los contenedores de Docker. Bind depende de la estrucutra de directorios para trabajar, los volumenes en el *host* son completamente administrado por Docker.
 
 Existen multiples comandos para administrar los volumenes en Docker, a continuación se muestran los más comunes:
 
 *	`docker volume create <vol_name>`: Crear un nuevo volumen
+*	`docker volume rm <vol_name>`: Eliminar volumen
 *	`docker volume ls`: Listar volumenes disponibles
 *	`docker volume inspect <vol_name>`: Ver información detallada del volumen
-*	`docker volume rm <vol_name>`: Eliminar volumen
 
 ### 3. Asignando un volumen al contenedor
 
@@ -48,6 +48,14 @@ docker run -d \
   nginx:latest
 ```
 
-Ver detalle del volumen:
+Para obtener la información referente a un volumen es posible utilizar el comando `docker volumen inspect` para desplegar información adicional referente al volumen.
+
+Ejemplo:
+
+	docker volume inspect myvol2
+
+Resultado del comando:
 
 ![docker_build.png](miscellaneous/docker_inspect_vol.png)
+
+Donde *myvol2* es el nombre del volumen existente en el *host*.
