@@ -1,17 +1,17 @@
 # Uso de *bind mounts*
 
-Docker permite que los directorios y archivos en el *host* sea accesible dentro el contenedor. Los archivos o directorios deben ser referenciados de manera absoluta en el *host* para que se puedan montar de manera correcta en el contenedor. 
+Docker permite que los directorios y archivos en el *host* sean accesibles dentro del contenedor. Los archivos o directorios deben ser referenciados de manera absoluta en el *host* para que se puedan montar de manera correcta en el contenedor. 
 
 
 ### 1. Utilizando *bind mount*
 
-Al momento de ejecutar un contenedor es posible especificar que directorios del *host* estará disponible en el contenedor agregando el parámetro `--mount`. 
+Al momento de ejecutar un contenedor es posible especificar que directorios del *host* estaran disponibles en el contenedor agregando el parámetro `--mount`. 
 
 	--mount type=bind,source=<host_path>,target=<container_destination_path>
 
-* `type` indica que se vinculará un directorio del *host* dentro el contenedor.
-* `source` ruta absoluta del directorio o archivo que será accesible dentro el contenedor.
-* `destionation` ruta absoluta del directorio o archivo donde se depositará dentro el contenedor.
+* `type` indica que se vinculará un directorio del *host* dentro del contenedor.
+* `source` ruta absoluta del directorio o archivo que será accesible dentro del contenedor.
+* `destionation` ruta absoluta del directorio o archivo donde se depositará dentro del contenedor.
 
 Ejemplo:
 

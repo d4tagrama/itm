@@ -102,6 +102,6 @@ Ejemplo:
 
 	docker run -it -p 8080:8080 roid/itm:v2
     
-Procedemos abrir nuestro navegador ingresando la IP de nuestro dispositivo. A partir de este momento cualquier persona que tenga la dirección IP del *host* y el puerto que se mapeo la aplicación podrá  ser acceder a la aplicación web.
+Abrimos nuestro navegador ingresando la IP de nuestro dispositivo. A partir de este momento cualquier persona que tenga la dirección IP del *host* y el puerto que se mapeo la aplicación podrá  ser acceder a la aplicación web.
 
 ![docker_web_browser_port.png](miscellaneous/docker_web_browser_port.png)

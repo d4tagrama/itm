@@ -11,7 +11,7 @@ Los contenedores se comportan similar a una máquina virtual, pero sin ser una c
 
 Docker en apariencia se asemeja a vagrant ya que cuenta con un repositorio remoto como *github* llamado Ducker Hub (https://hub.docker.com/) en Docker hub es posible encontrar imágenes oficiales de las diferentes distribuciones de GNU/Linux como Ubuntu, CentOS entre otros.
 
-Al igual que *git* Docker proporciona un comando para descargar de los repositorios una imagen base para crear un contenedor.
+Al igual que *git*, Docker proporciona un comando para descargar de los repositorios una imagen base para crear un contenedor.
 
 Ejemplo:
 
@@ -35,7 +35,7 @@ Ejemplo de salida del comando:
 
 Como se puede visualizar en la imagen anterior existen tres imágenes, dos basadas de la imagen *roid/itm* (versión 2 y latest) y una imagen del repositorio *nginx*.
 
-Una imagen base puede tener diferentes versiones permitiendo crear diferentes versiones de la aplicación a hospedar. Un ejemplo se puede crear una imagen basada en PHP versión 5.6 y otra basada en PHP versión 7.2.
+Una imagen base puede tener diferentes versiones permitiendo crear diferentes versiones de la aplicación a hospedar. Por ejemplo: se puede crear una imagen basada en PHP versión 5.6 y otra basada en PHP versión 7.2 con el mismo código fuente.
 
 
 ### 4. Eliminando Imágenes

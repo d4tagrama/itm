@@ -30,8 +30,7 @@ Ejemplo de salida:
 
 ### 3. Eliminar Box
 
-Las plantillas descargas tienen la función de generar diferentes máquinas virtuales de mana necesidad del uso de Internet. En ocasiones ya no es necesario mantener la imagen o box para eliminar la platilla se puede utilizar el siguiente comando:
-
+Las plantillas descargadas permiten generar máquinas virtuales sin la necesidad del uso de Internet. Cuando las platillas ya no son utilizadas y se requiere recuperar el espacio consumido por las mismas es necesario eliminar estas platillas con el comando `remove`.
 ```bash
 vagrant box remove <box name>
 ```

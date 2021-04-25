@@ -1,6 +1,6 @@
 # Creando contenedor
 
-A continuación, se muestra como generar un contenedor basado de de la imagen de Ubuntu.
+A continuación, se muestra como generar un contenedor basado de la imagen de Ubuntu.
 
 ### 1. Creando un contenedor
 
@@ -16,10 +16,10 @@ Para crear el contenedor ejecutamos el siguiente comando:
 Descripción:
 
 - `docker run`: Indica que se desea iniciar un contenedor.
-- `-it` : Estos parámetros indicar que se trabajará de manera interactiva (`i`) y se tendrá acceso a la TTY del contenedor (`t`).
+- `-it` : Estos parámetros indican que se trabajará de manera interactiva (`i`) y se tendrá acceso a la TTY del contenedor (`t`).
 - `--rm`: Indica que cuando se detenga el contenedor este será eliminado.
 - `ubuntu`: Indica la imagen que se utilizará para crear el contenedor.
-- `bash`:  El último parámetro proporciona el comando el comando que se desea ejecutar dentro el contenedor.
+- `bash`:  El último parámetro proporciona el comando que se desea ejecutar dentro el contenedor.
 
 Ejemplo de salida:
 

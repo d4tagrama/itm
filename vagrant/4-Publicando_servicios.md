@@ -5,7 +5,7 @@
 
 Es posible realizar la publicación de los servicios utilizando la *IP* del *host*. Para realizar la publicación es necesario configurar un *forward* del puerto deseado del *host* a la máquina virtual.
 
-Esto se pueda realizar agregando la siguiente línea al apartado de configuración de la máquina virtual:
+Esto se puede realizar agregando la siguiente línea al apartado de configuración de la máquina virtual:
 
 ```bash
 config.vm.network "forwarded_port", guest: <guest_port>, host: <host_port>
@@ -27,7 +27,7 @@ Vagrant permite compartir nuestro ambiente vía Internet permitiendo publicar nu
 
 Posterior a la instalación de ngrok es posible instalar el *plugin* **vagrant-share** el cual conectara los puertos declarados en el Vagrantfile con *ngrok*.
 
-La instalación del plugin se realizar con el siguiente comando:
+La instalación del plugin se realiza con el siguiente comando:
 
 ```bash
 $ vagrant plugin install vagrant-share

@@ -1,6 +1,6 @@
 # Aprovisionamiento
 
-Las máquinas virtuales (Box) es una plantilla de un sistema operativo en blanco es decir no hospeda ningún servicio o aplicación en la máquina virtual.
+A continuación se describirá como instalar servicios dentro las máquinas virtuales:
 
 ### 1. Instalación de paquetes
 
@@ -84,7 +84,7 @@ Como se puede observar regresa el contenido HTML de la página de bienvenida de 
 
 ### 3. Aprovisonando con *scripts*
 
-Para automatiza el aprovisionamiento es posible utilizar *scripts* el cual permita instalar, configurar o cualquier acción requerida para aprovisionar nuestra aplicación:
+Para automatizar el aprovisionamiento es posible utilizar *scripts* los caules permiten instalar, configurar, y establecer los parametros de funcionamiento de la aplicación:
 
 #### 3.1 Generando *script*
 
@@ -107,12 +107,12 @@ En el archivo *Vagrantfile* en la sección de configuración agregamos la siguie
 
 	config.vm.provision :shell, path: "bootstrap.sh"
 
-La líena anterior indica que se ejectura un *script* en la consola de la máquina virtual.
+La línea anterior indica que se ejecutarpa el *script* nombrado *bootstrap.sh* en la consola de la máquina virtual.
 
 
 ### 3.3 Iniciando nuestro *Box*
 
-Para aprovisonar la máquina virtual de manera automática es posible realizarlos ejecutando con el comando `vagrant up` su es la primera vez que se generá lamáquina virtual.
+Para aprovisonar la máquina virtual de manera automática es posible realizarlo ejecutando con el comando `vagrant up`.
 
 En dado caso la máquina virtual ya este en ejecución o sea una máquina virutal ya existente es posible forzar el aprovisionamiento utilizando el comando:
 
