@@ -41,4 +41,3 @@ Ejemplo de URL:
 
 ![vagrant_share_web.png](miscellaneous/vagrant_share_web.png)
 
-[^1]. Para más información consulte la liga: [ngrok](https://ngrok.com/download)

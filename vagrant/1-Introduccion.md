@@ -20,7 +20,7 @@ Aun cuando es posible generar el `Vagrantfile` de manera manual con cualquier ed
 vagrant init ubuntu/bionic64
 ```
 
-Podemos utilizar el comando `ls` en la consola para listar los archivos en el directorio actual donde se debe visualizar un nuevo archivo con el nombre de  *Vagrantfile*.
+Podemos utilizar el comando `ls` en la consola para listar los archivos en el directorio actual donde se visualiza el archivo con el nombre de  *Vagrantfile*.
 
 ### 3. Iniciando la máquina virtual
 Vagrant permite poner en diferentes estados la máquina virtual  como: **halt**, **up**, **suspended**, entre otros. Para inicializar la máquina virtual es necesario ejecutar el siguiente comando:

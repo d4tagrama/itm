@@ -110,7 +110,7 @@ En el archivo *Vagrantfile* en la sección de configuración agregamos la siguie
 La línea anterior indica que se ejecutarpa el *script* nombrado *bootstrap.sh* en la consola de la máquina virtual.
 
 
-### 3.3 Iniciando nuestro *Box*
+### 3.3 Actualizando configuración
 
 Para aprovisonar la máquina virtual de manera automática es posible realizarlo ejecutando con el comando `vagrant up`.
 

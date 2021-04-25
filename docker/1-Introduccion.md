@@ -3,9 +3,9 @@
 
 ### 1. ¿Qué es un contenedor?
 
-Un contenedor es un proceso en la computadora *host* el cual se encuentra aislado de el resto de los procesos. El aislamiento se logra utilizando los *namespace* y *cgroups* a nivel kernel.
+Un contenedor es un proceso en la computadora *host* el cual se encuentra aislado de el resto de los procesos del sistema operativo. El aislamiento se logra utilizando los *namespace* y *cgroups* a nivel kernel.
 
-Los contenedores se comportan similar a una máquina virtual, pero sin ser una como tal. Un contenedor se basa de una imagen la cual proporciona el sistema de archivos el cual proporciona las dependencias necesarias para su funcionamiento como: archivos de configuración, scripts, entre otros.
+Los contenedores se comportan similar a una máquina virtual, pero sin ser una como tal. Un contenedor se basa de una imagen la cual proporciona el sistema de archivos proporcionando las dependencias necesarias para su funcionamiento como: archivos de configuración, scripts, entre otros.
 
 ### 2. Descargando Imagenes
 

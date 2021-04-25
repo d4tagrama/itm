@@ -15,7 +15,7 @@ Al momento de ejecutar un contenedor es posible especificar que directorios del 
 
 Ejemplo:
 
-Considere que se desea acceder el directorio `target` que se encuentra en el directorio de trabajo actual sea accesible dentro el contenedor en el directorio `/app`. Una manera de lograr esto es proporcionar en el atributo `source` el valor `$(pwd)/target` (`$(pwd)` indica de manera reducida el directorio de trabajo). En el atributo `target` es necesario
+Considere que se desea acceder el directorio `target` que se encuentra en el directorio de trabajo actual sea accesible dentro el contenedor en el directorio `/app`. Una manera de lograr esto es proporcionar en el atributo `source` el valor `$(pwd)/target` (`$(pwd)` indica de manera reducida el directorio de trabajo). 
 
 ```
 docker run -d \

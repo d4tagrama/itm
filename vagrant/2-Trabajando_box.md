@@ -13,7 +13,7 @@ vagrant box add USER/BOX
 ```
 
 
-Para descargar el *box* referente a Ubuntu bionic ejecutamos el comando:
+Por ejemplo, para descargar el *box* referente a Ubuntu bionic ejecutamos el comando:
 
 ```bash
 vagrant box add ubuntu/bionic64
@@ -22,15 +22,15 @@ Es posible consultar la lista de *Box* Disponible en el [sitio](https://app.vagr
 
 ### 2. Visualizando plantillas (Box)
 
-El comando `vagrant box list` permite visualizar los templetes disponibles en el sistema local, estos templetes (Box) 
+El comando `vagrant box list` permite visualizar las plantillas disponibles en el sistema local. Las plantillas descargadas permiten generar máquinas virtuales sin la necesidad del uso de Internet acelerado el proceso de instalación. 
 
-Ejemplo de salida: 
+Ejemplo de salida del comando list: 
 
 ![box_list.png](miscellaneous/box_list.png)
 
 ### 3. Eliminar Box
 
-Las plantillas descargadas permiten generar máquinas virtuales sin la necesidad del uso de Internet. Cuando las platillas ya no son utilizadas y se requiere recuperar el espacio consumido por las mismas es necesario eliminar estas platillas con el comando `remove`.
+Cuando las platillas ya no son requeridas y se requiere recuperar el espacio consumido por las mismas es necesario eliminar las con el comando `remove`.
 ```bash
 vagrant box remove <box name>
 ```

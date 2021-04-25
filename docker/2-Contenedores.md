@@ -4,9 +4,9 @@ A continuación, se muestra como generar un contenedor basado de la imagen de Ub
 
 ### 1. Creando un contenedor
 
-Los contenedores se basan de una imagen para su creación gracias a esta caracteristica es posible crear múltiples contenedores en cuestión de segundos a diferencia de una máquina virtual la cual puede llevar de varios minutos en estar lista para su funcionamiento.
+Un contenedor se basa de una imagen para su creación, gracias a esta característica es posible crear múltiples contenedores en cuestión de segundos a diferencia de una máquina virtual la cual puede llevar de varios minutos en estar lista para su funcionamiento.
 
-Para crear el contenedor ejecutamos el siguiente comando:
+Para crear un contenedor ejecutamos el siguiente comando:
 
 
 ```bash
@@ -16,9 +16,9 @@ Para crear el contenedor ejecutamos el siguiente comando:
 Descripción:
 
 - `docker run`: Indica que se desea iniciar un contenedor.
-- `-it` : Estos parámetros indican que se trabajará de manera interactiva (`i`) y se tendrá acceso a la TTY del contenedor (`t`).
-- `--rm`: Indica que cuando se detenga el contenedor este será eliminado.
-- `ubuntu`: Indica la imagen que se utilizará para crear el contenedor.
+- `-it` : Estos parámetros permiten trabajar de manera interactiva (`i`) y se que se tendrá acceso a la TTY del contenedor (`t`).
+- `--rm`: Cuando se detenga el contenedor este será eliminado de manera automática.
+- `ubuntu`: La imagen que se utilizará para crear el contenedor.
 - `bash`:  El último parámetro proporciona el comando que se desea ejecutar dentro el contenedor.
 
 Ejemplo de salida:
@@ -27,12 +27,12 @@ Ejemplo de salida:
 
 ![run_ubuntu.png](miscellaneous/docker_run_ubuntu.png)
 
-El *prompt* (`root@7020d39d6f60:/#`) indica que nos encontramos dentro el contenedor la imagen de Ubuntu proporciona la gran mayoría de los comandos disponibles en dicha distribución.
+El *prompt* (`root@7020d39d6f60:/#`) indica que nos encontramos dentro el contenedor el cual se basa de la imagen de Ubuntu. Dentro este contenedor se encuentra disponible la gran mayoría de los comandos disponibles en GNU/Linux.
 
 
 ### 2. Verificando contenedores en ejecución
 
-Uno de los beneficios de utilizar contenedores es la capacidad de generar múltiples contenedores basada de la misma o diferente imagen.
+Uno de los beneficios de utilizar contenedores es la capacidad de generar múltiples contenedores basada de la misma o diferente imagen de manera rápida y ágil.
 Para visualizar que contenedores están en ejecución es posible utilizar el comando `docker ps`:
 
 

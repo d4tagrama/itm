@@ -1,6 +1,6 @@
 # Personalizando contenedores
 
-Existe una amplia variedad de imágenes disponibles en los repositorios de Docker hub , pero en ocasiones estas imágenes no se acomodan a la necesidad de nuestra aplicación. Docker permite personalizar la imagen base y obtener como resultado una nueva imagen a la medida de la aplicación a publicar.
+Existe una amplia variedad de imágenes disponibles en los repositorios de Docker hub, pero en ocasiones estas imágenes no  con las características requeridas para la aplicación. Docker permite personalizar la imagen base y obtener como resultado una nueva imagen a la medida de la aplicación a publicar.
 
 
 
@@ -15,19 +15,19 @@ A continuación, crearemos un Dockerfile el cual permita crear una aplicación w
     EXPOSE 8080
 	CMD ["node", "server.js"]
 
-Descripción de parametros:
+Descripción de parámetros:
 
-- `FROM` crea una capa de la imagen node.
-- `WORKDIR` establece como directorio de trabajo el directorio /app (similar a ejecutar `cd /app`)
-- `COPY` agregar los archivos del directorio actual al directorio /app dentro del contenedor.
-- `RUN` ejecuta el comando indicado.
-- `EXPOSE` indica que puertos estará en escucha el contenedor.
-- `CMD` especifica que comando ejecutará por omisión el contenedor.
+- `FROM` Imagen a utilizar para generar la nueva imagen.
+- `WORKDIR` Establece como directorio de trabajo el directorio /app (similar a ejecutar `cd /app`)
+- `COPY` Agregar los archivos del directorio actual al directorio /app dentro del contenedor.
+- `RUN` Ejecuta el comando indicado.
+- `EXPOSE` Indica que puertos estará en escucha el contenedor.
+- `CMD` Especifica que comando ejecutará por omisión el contenedor.
 
 
 ### 2. Creando imagen
 
-Para generar una nueva imagen Docker proporciona el comando `build` este comando permite generar una nueva imagen basada de otra y personalizar la nueva imagen utilizando el Dockerfile desado.
+Para generar una nueva imagen Docker proporciona el comando `build` este comando permite generar una nueva imagen basada de otra y personalizar la nueva imagen utilizando el Dockerfile.
 
 Ejemplo de sintaxis del comando `docker build`:
 
@@ -35,9 +35,9 @@ Ejemplo de sintaxis del comando `docker build`:
 docker build -t <repositorio>/<nombre_contenedor>:<tag> <ubicación del Dockerfile>
 ```
 
-Para crear una nueva es necesario realizar los siguientes pasos:
+Para crear una nueva imagen es necesario realizar los siguientes pasos:
 
-1. Ubicarnos en el directorio *dockerfile*.
+1. Ubicarnos en el directorio donde se encuentra el arhivo *dockerfile*.
 2. Dentro este directorio ejecutar el siguiente comando `docker build -t roid/itm:v2 .` Es importante mencionar que se desea generar una imagen para el repositorio *roid* con nombre *itm* y etiqueta *v2*.
 
 	Ejemplo de salida:
@@ -58,7 +58,7 @@ La ejecución de un contenedor se puede realizar de dos maneras la primera permi
 
 #### 3.1 Modo interactivo.
 
-Para ejecutar un contenedor Docker cuenta con el `run` para poner en marcha el contenedor. Para ejecutar un contenedor basado de la imagen generada con anterioridad ejecutamos el siguiente comando:
+Para ejecutar un contenedor Docker cuenta con el comando `run` para poner en marcha el contenedor. Para ejecutar un contenedor basado de la imagen generada con anterioridad ejecutamos el siguiente comando:
 
 		docker run -it roid/itm:v2
 
@@ -94,7 +94,7 @@ Para verificar si el contenedor esta ejecutando la aplicación web abrimos nuest
 
 ### 5. Mapeo de puertos
 
-En ocasiones es necesario permitir que los usuario visualicen la aplicación web dentro el contenedor de manera externa para su validación. Para permitir que una aplicación web que se encuentra dentro un contenedor esté disponible fuera del *host* que hospeda el contenedor es necesario proporcionar el parámetro `-p <host_port>:<container_port>` (parámetro puerto) al comando `run` para exponer los puertos del contenedor hacia el exterior.
+En ocasiones es necesario permitir que los usuario visualicen de manera externa la aplicación web dentro el contenedor. Para permitir que una aplicación web que se encuentra dentro un contenedor esté disponible fuera del *host* que hospeda el contenedor es necesario proporcionar el parámetro `-p <host_port>:<container_port>` (parámetro puerto) al comando `run` para exponer los puertos del contenedor hacia el exterior.
 
 
 
