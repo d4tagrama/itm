@@ -17,12 +17,12 @@ A continuación, crearemos un Dockerfile el cual permita crear una aplicación w
 
 Descripción de parámetros:
 
-- `FROM` Imagen a utilizar para generar la nueva imagen.
-- `WORKDIR` Establece como directorio de trabajo el directorio /app (similar a ejecutar `cd /app`)
-- `COPY` Agregar los archivos del directorio actual al directorio /app dentro del contenedor.
-- `RUN` Ejecuta el comando indicado.
-- `EXPOSE` Indica que puertos estará en escucha el contenedor.
-- `CMD` Especifica que comando ejecutará por omisión el contenedor.
+- `FROM`: Imagen a utilizar para generar la nueva imagen.
+- `WORKDIR`: Establece como directorio de trabajo el directorio /app (similar a ejecutar `cd /app`)
+- `COPY`: Agregar los archivos del directorio actual al directorio /app dentro del contenedor.
+- `RUN`: Ejecuta el comando indicado.
+- `EXPOSE`: Indica que puertos estará en escucha el contenedor.
+- `CMD`: Especifica que comando ejecutará por omisión el contenedor.
 
 
 ### 2. Creando imagen
@@ -54,7 +54,7 @@ Para verificar la creación de la nueva imagen utilizamos el comando `docker ima
 
 ### 3. Ejecutando contenedor
 
-La ejecución de un contenedor se puede realizar de dos maneras la primera permite ejecutar el contenedor de manera interactiva es decir visualizar el *standard output* del contendor en pantalla. La segunda opción es ejecutar el contenedor en modo no atendido un *background*.
+La ejecución de un contenedor se puede realizar de dos maneras la primera permite ejecutar el contenedor de manera interactiva es decir visualizar el *standard output* del contendor en pantalla. La segunda opción es ejecutar el contenedor en modo no atendido o *background*.
 
 #### 3.1 Modo interactivo.
 
@@ -69,7 +69,7 @@ Ejemplo de comando:
 
 #### 3.2 Modo no atendido
 
-Para la ejecución en modo *background* utilizaremos el comando `run`, pero con la diferencia de en lugar de proporcionar los parámentros `-it` proporcionaremos el parámetro `-d`.
+Para la ejecución en modo *background* utilizaremos el comando `run`, pero con la diferencia que es necesario sustituir los parámetros `-it` por `-d`.
 
 	docker run -d roid/itm:v2
 

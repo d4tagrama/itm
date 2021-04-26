@@ -9,9 +9,9 @@ Al momento de ejecutar un contenedor es posible especificar que directorios del 
 
 	--mount type=bind,source=<host_path>,target=<container_destination_path>
 
-* `type` indica que se vinculará un directorio del *host* dentro del contenedor.
-* `source` ruta absoluta del directorio o archivo que será accesible dentro del contenedor.
-* `destionation` ruta absoluta del directorio o archivo donde se depositará dentro del contenedor.
+* `type`: indica que se vinculará un directorio del *host* dentro del contenedor.
+* `source`: ruta absoluta del directorio o archivo que será accesible dentro del contenedor.
+* `destionation`: ruta absoluta del directorio o archivo donde se depositará dentro del contenedor.
 
 Ejemplo:
 
@@ -28,9 +28,9 @@ docker run -d \
 
 ### 2. Trabajando con volúmenes
 
-Los volúmenes es el mecanismo preferido para almacenar información de manera persistente en los contenedores de Docker. Bind depende de la estrucutra de directorios para trabajar, los volumenes en el *host* son completamente administrado por Docker.
+Los volúmenes es el mecanismo preferido para almacenar información de manera persistente en los contenedores de Docker. Bind depende de la estructura de directorios para trabajar, los volumenes en el *host* son completamente administrado por Docker.
 
-Existen multiples comandos para administrar los volumenes en Docker, a continuación se muestran los más comunes:
+Existen múltiples comandos para administrar los volumenes en Docker. A continuación, se muestran los más comunes:
 
 *	`docker volume create <vol_name>`: Crear un nuevo volumen
 *	`docker volume rm <vol_name>`: Eliminar volumen
@@ -48,7 +48,7 @@ docker run -d \
   nginx:latest
 ```
 
-Para obtener la información referente a un volumen es posible utilizar el comando `docker volumen inspect` para desplegar información adicional referente al volumen.
+Para obtener la información referente a un volumen es posible utilizar el comando `docker volumen inspect` para desplegar información adicional relacionada al volumen.
 
 Ejemplo:
 
