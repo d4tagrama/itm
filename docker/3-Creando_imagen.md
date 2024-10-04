@@ -69,6 +69,7 @@ Ejemplo de comando:
 ![docker_run_it.png](miscellaneous/docker_run_it.png)
 
 
+Nota: Duespues de ejecutar el comando anterior es posible salir del modo interactivo precionando ctrl + c o cerrando la ventana.
 #### 3.2 Modo no atendido
 
 Para la ejecución en modo *background* utilizaremos el comando `run`, pero con la diferencia que es necesario sustituir los parámetros `-it` por `-d`.
