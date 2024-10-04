@@ -10,10 +10,12 @@ A continuación, crearemos un Dockerfile el cual permita crear una aplicación w
 
 	FROM node
     WORKDIR /app
-	COPY disc/* /app
+	COPY src/* /app
 	RUN npm install
     EXPOSE 8080
 	CMD ["node", "server.js"]
+
+Nota: Es necesario copiar el directo dockerfile/src en el directorio donde creen el Dockerfile.
 
 Descripción de parámetros:
 
